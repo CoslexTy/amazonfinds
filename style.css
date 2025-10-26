@@ -186,6 +186,9 @@ footer {
   font-size: 0.9rem !important;
   color: #333 !important;
 }
+.goog-te-gadget-simple > span {
+  display: none !important;
+}
 .goog-te-gadget-simple {
   background-color: #f5a021 !important;
   border-radius: 8px !important;
@@ -196,11 +199,28 @@ footer {
   cursor: pointer !important;
   transition: background-color 0.3s ease;
 }
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+.goog-te-gadget-simple::before {
+  content: "🌐";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+header, main, footer, .hero {
+  position: relative;
+  z-index: 1;
+}
 .goog-te-gadget-simple:hover {
   background-color: #ff6f61 !important;
 }
 .goog-te-menu-value span {
-  color: white !important;
+  color: black !important;
 }
  h2 {
     margin-top:5px;
@@ -256,3 +276,7 @@ footer {
   }
   
 
+html, body {
+  top: 0 !important;
+  position: static !important;
+}
